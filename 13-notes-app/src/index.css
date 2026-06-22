@@ -1,0 +1,145 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, 
+body{
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+.notes-app{
+  min-height: 100vh;
+  width: 100%;
+  background-color: black;
+  padding: 30px;
+  color: white;
+}
+.notes-container{
+  display: flex;
+}
+@media (max-width: 900px){
+  .notes-container{
+    flex-direction: column;
+  }
+}
+/* Form Section */
+.notes-app-form{
+  width: 50%;
+  padding: 40px;
+}
+.notes-app-form h1{
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.text-area{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 16px;
+}
+.enter-details, 
+.enter-task{
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  width: 100%;
+  outline: none;
+}
+.enter-details{
+  height: 128px;
+  resize: none;
+}
+.button{
+  width: 100%;
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  color: black;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+.button:active{
+  transform: scale(0.95);
+}
+
+.recent-notes{
+  font-size: 2.25rem;
+  font-weight: 700;
+  width: 50%;
+  border-left: 2px solid white;
+  padding: 40px;
+}
+.notes-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 24px;
+  max-height: none;
+  overflow-y: visible;
+}
+.details{
+  height: 208px;
+  width: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-image: url("https://static.vecteezy.com/system/resources/previews/037/152/677/non_2x/sticky-note-paper-background-free-png.png");
+  background-size: cover;
+  border-radius: 12px;
+  padding: 36px 16px 16px;
+  color: black;
+
+  overflow: hidden;
+}
+.details h5{
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.details h6{
+  font-size: medium;
+  word-break: break-word;
+}
+.note-content{
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+.note-content::-webkit-scrollbar{
+  width: 0;
+}
+.details hr{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media (max-width: 900px){
+  .notes-app-form,
+  .recent-notes{
+    width: 100%;
+  }
+}
+.delete-btn{
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.delete-btn:active{
+  transform: scale(0.95);
+}
